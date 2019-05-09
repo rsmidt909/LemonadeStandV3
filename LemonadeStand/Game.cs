@@ -132,7 +132,7 @@ namespace LemonadeStand
             day.weather.OneDayOrSeven();           
             Console.ReadLine();
             Console.Clear();
-            moneyText = true;
+            moneyText = true;            
             priceText = true;           
             day.player.CheckLemonOrderingMoney();
             GameCheck();

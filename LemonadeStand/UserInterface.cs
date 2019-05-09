@@ -11,16 +11,16 @@ namespace LemonadeStand
 
 
         //member variables (HAS A)       
- 
-        
 
+
+        
 
 
 
 
         //Constructor (BUILDS OBJECT)
-        
 
+        
 
 
 
@@ -114,7 +114,7 @@ namespace LemonadeStand
         }
 
 
-
+        
 
 
 
