@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LemonadeStand.Customer">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAEAAQAIABAAAAEAMAAAAAAAEAAAAQ=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Day" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAEABAAAAEAQEAAAAAAAAARAAAIQBAAAAAIAAAAQ=</HashCode>
+      <FileName>Day.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="weather" />
+      <Field Name="player" />
+      <Field Name="customer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LemonadeStand.Inventory" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgAAAAAAAAAAAAAAAAAAACACAAAAAAAQQAABAAAg=</HashCode>
+      <FileName>Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Player" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAEIlAAAAFQAgQAgAIAAAAAACAgQEoAAAAAAAAAU=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="lemonadeMachine" />
+      <Field Name="wallet" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LemonadeStand.UserInterface" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAgAAAAAAA=</HashCode>
+      <FileName>UserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Weather" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAIAAAAAAABAAAAAAAAAAgAAAAAAAAAAAABAAQQ=</HashCode>
+      <FileName>Weather.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.AfroSamurai" Collapsed="true">
+    <Position X="2" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>AfroSamurai.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Domino" Collapsed="true">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>Domino.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Elissa" Collapsed="true">
+    <Position X="2" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>Elissa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Ender" Collapsed="true">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>Ender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Joe" Collapsed="true">
+    <Position X="2" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>Joe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Marcus" Collapsed="true">
+    <Position X="2" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <FileName>Marcus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.Wallet" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAACAAAAAAAAAAAAAACAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Wallet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LemonadeStand.LemonadeMachine">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGIAAAAAAEAAAUAAAABAAAAACAAWAAAQACACAQE=</HashCode>
+      <FileName>LemonadeMachine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="inventory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LemonadeStand.Game" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEAAAAAAAAIAAEAAAAAAAAAAHAgEAAAAAAAAAAE=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="day" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
