@@ -18,8 +18,16 @@ namespace LemonadeStand
         public int iceNumber;
         public int numberResponse;                            
         public Day day;
-        
-       
+        public bool moneyText;
+        public bool priceText;
+        public bool setPriceText;
+        public bool timeForLemonadeText;
+        public bool noMoreCustomersText;
+        public bool profitForDayText;
+        public bool weatherText;
+        public bool gameOverText;
+
+
 
 
 
@@ -37,9 +45,19 @@ namespace LemonadeStand
             sugarNumber = 0;
             iceNumber = 0;
             numberResponse = 0;
-            
-            
-            
+            moneyText = false;
+            priceText = false;
+            setPriceText = false;
+            timeForLemonadeText = false;
+            noMoreCustomersText = false;
+            profitForDayText = false;
+            weatherText = false;
+            gameOverText = false;
+
+
+
+
+
 
 
 
@@ -51,20 +69,20 @@ namespace LemonadeStand
 
 
 
-        
-        
 
-        
 
-        public void GameCheck()
+
+        public  void GameCheck()
         {
             if (day.player.wallet.totalMoney <= day.player.store.costOfSupplies)
             {
-                Console.WriteLine("You ran out of money to make a single cup of lemonade! Game Over!");
+                gameOverText = true;
                 Console.ReadLine();
                 Environment.Exit(0);
             }
         }
+
+
 
         public void StatReset()
         {
@@ -94,51 +112,55 @@ namespace LemonadeStand
             }
         }
 
+        public void TextReset()
+        {
+            moneyText = false;
+            priceText = false;
+            setPriceText = false;
+            timeForLemonadeText = false;
+            noMoreCustomersText = false;
+            profitForDayText = false;
+            weatherText = false;
+            gameOverText = false;
+        }
         
 
         public void Run()
         {
             Console.Clear();
-            Console.WriteLine("Youre Total Money is " + day.player.wallet.totalMoney);
-            Console.WriteLine("Would you like to see just 'One' days weather or the next 'Seven' days?");
-            day.weather.OneDayOrSeven();
-            Console.WriteLine("Press enter....");
+            weatherText = true;
+            day.weather.OneDayOrSeven();           
             Console.ReadLine();
             Console.Clear();
-            Console.WriteLine("You have " + day.player.wallet.totalMoney + " Dollars.");
-            Console.WriteLine("The price of lemons are " + day.player.store.costOfLemon + " Dollars");
+            moneyText = true;
+            priceText = true;           
             day.player.CheckLemonOrderingMoney();
             GameCheck();
-            Console.WriteLine("You have " + day.player.wallet.totalMoney + " Dollars left.");
-            Console.WriteLine("The price of Sugar cubes are " + day.player.store.costOfSugar + " Dollars");
+            moneyText = true;                        
             day.player.CheckSugarOrderingMoney();
             GameCheck();
-            Console.WriteLine("You have " + day.player.wallet.totalMoney + " Dollars left.");
-            Console.WriteLine("The price of Ice are " + day.player.store.costOfIce + " Dollars");
+            moneyText = true;
             day.player.CheckIceOrderingMoney();
             GameCheck();
-            Console.WriteLine("You have " + day.player.wallet.totalMoney + " Dollars left.");
-            Console.WriteLine("The price of Cups are " + day.player.store.costOfCup + " Dollars");
+            moneyText = true;
             day.player.CheckCupOrderingMoney();
             GameCheck();
             WhoMakesRecipe(day.player.inventory);
-            Console.WriteLine("What would you like to set the price of one cup of lemonade?");
-            Console.WriteLine("You cannot set the price higher than 2 times the amount that the supplies cost individually.");
-            Console.WriteLine("The max set price is " + day.player.maxPrice + " Dollars.");
-            Console.WriteLine("*Tip* If you set the price too high, you will have a lower cance of lemonade being purchased! *Tip*");
+            setPriceText = true;            
             day.player.SetPurchasePrice();
             Console.Clear();
-            Console.WriteLine("Time to sell some Lemonade!");
+            timeForLemonadeText = true;           
             day.AmountOfCustomersForDay();
             day.FlowOfCustomers();
-            Console.WriteLine("No more customers for the day!");
+            noMoreCustomersText = true;            
             Console.ReadLine();
             day.ProfitFromLemonadeSold();
             day.player.inventory.Perishable();
-            Console.WriteLine("Youre profit for the day is " + day.player.wallet.profit);
-            Console.WriteLine("Youre total money is " + day.player.wallet.totalMoney);
+            profitForDayText = true;
+            moneyText = true;            
             Console.ReadLine();
             StatReset();
+            TextReset();
             GameCheck();
             Run();
 

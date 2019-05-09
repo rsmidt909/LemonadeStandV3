@@ -11,9 +11,7 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             Game game = new Game();
-            UserInterface.SetHowToPlay();
-            UserInterface.TellHowToPlay();
-            Console.ReadLine();
+            UserInterface.HowToPlay();
             game.Run();
         }
     }
