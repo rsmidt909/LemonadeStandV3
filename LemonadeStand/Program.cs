@@ -14,7 +14,7 @@ namespace LemonadeStand
             UserInterface.SetHowToPlay();
             UserInterface.TellHowToPlay();
             Console.ReadLine();
-            game.MasterMeth();
+            game.Run();
         }
     }
 }

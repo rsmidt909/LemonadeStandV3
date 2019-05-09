@@ -15,7 +15,7 @@ namespace LemonadeStand
         int lemonNumber;
         int sugarNumber;
         int iceNumber;
-        public Inventory inventory;
+        
 
         //Constructor (BUILDS OBJECT)
         public LemonadeMachine()
@@ -25,7 +25,7 @@ namespace LemonadeStand
             lemonNumber = 0;
             sugarNumber = 0;
             iceNumber = 0;
-            inventory = new Inventory();
+            
 
         }
 
@@ -87,18 +87,18 @@ namespace LemonadeStand
             }
         }
 
-        public void PlayerRecipe()
+        public void PlayerRecipe(Inventory inventory)
         {
-            inventory.lemons = inventory.lemons - lemonNumber;
-            inventory.sugar = inventory.sugar - sugarNumber;
-            inventory.ice = inventory.ice - iceNumber;
-            inventory.cups--;
+            inventory.amountOfLemon = inventory.amountOfLemon - lemonNumber;
+            inventory.amountOfSugar = inventory.amountOfSugar - sugarNumber;
+            inventory.amountOfIce = inventory.amountOfIce - iceNumber;
+            inventory.amountOfCup--;
 
         }
 
-        public void CanIMakePlayerRecipeLemonade()
+        public void CanIMakePlayerRecipeLemonade(Inventory inventory)
         {
-            PlayerRecipe();
+            PlayerRecipe(inventory);
             inventory.CheckSupplies();
             if (inventory.supplies == false)
             {
@@ -107,13 +107,13 @@ namespace LemonadeStand
             else
             {
                 inventory.cupsOfLemonade++;
-                CanIMakePlayerRecipeLemonade();
+                CanIMakePlayerRecipeLemonade(inventory);
             }
         }
 
-        public void CanIMakeLemonade()
+        public void CanIMakeLemonade(Inventory inventory)
         {
-            MakeLemonade();
+            MakeLemonade(inventory);
             inventory.CheckSupplies();
             if (inventory.supplies == false)
             {
@@ -122,7 +122,7 @@ namespace LemonadeStand
             else
             {
                 inventory.cupsOfLemonade++;
-                CanIMakeLemonade();
+                CanIMakeLemonade(inventory);
             }
         }
 
@@ -136,12 +136,12 @@ namespace LemonadeStand
             IceCheck();
         }
 
-        public void MakeLemonade()
+        public void MakeLemonade(Inventory inventory)
         {
-            inventory.lemons--;
-            inventory.sugar -= 2;
-            inventory.ice -= 2;
-            inventory.cups--;
+            inventory.amountOfLemon--;
+            inventory.amountOfSugar -= 2;
+            inventory.amountOfIce -= 2;
+            inventory.amountOfCup--;
 
 
         }

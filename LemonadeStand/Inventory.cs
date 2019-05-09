@@ -10,12 +10,14 @@ namespace LemonadeStand
     {
 
         //member variables (HAS A)
-        public int lemons;
-        public int sugar;
-        public int cups;
-        public int ice;
+        
         public bool supplies;
-        public int cupsOfLemonade;
+        public int cupsOfLemonade;       
+        public int amountOfCup;
+        public int amountOfIce;
+        public int amountOfSugar;
+        public int amountOfLemon;
+
 
 
 
@@ -23,12 +25,13 @@ namespace LemonadeStand
         //Constructor (BUILDS OBJECT)
         public Inventory()
         {
-            lemons = 0;
-            sugar = 0;
-            cups = 0;
-            ice = 0;
+            
             supplies = true;
-            cupsOfLemonade = 0;
+            cupsOfLemonade = 0;            
+            amountOfCup = 0;
+            amountOfIce = 0;
+            amountOfSugar = 0;
+            amountOfLemon = 0;
         }
 
 
@@ -38,19 +41,19 @@ namespace LemonadeStand
         //member methods(CAN DO)
         public void CheckSupplies()
         {
-            if (lemons < 0)
+            if (amountOfLemon < 0)
             {
                  supplies = false;
             }
-            else if (sugar < 0)
+            else if (amountOfSugar < 0)
             {
                  supplies = false;
             }
-            else if (cups < 0)
+            else if (amountOfCup < 0)
             {
                  supplies = false;
             }
-            else if (ice < 0)
+            else if (amountOfIce < 0)
             {
                 supplies = false;
             }
@@ -62,10 +65,10 @@ namespace LemonadeStand
 
         public void Perishable()
         {
-            cups = 0;
-            ice = 0;
-            sugar = 0;
-            lemons = 0;
+            amountOfCup = 0;
+            amountOfIce = 0;
+            amountOfSugar = 0;
+            amountOfLemon = 0;
             cupsOfLemonade = 0;
         }
 

@@ -25,10 +25,7 @@ namespace LemonadeStand
         {
             totalMoney = 75;
             profit = 0;
-            costOfCup = 1;
-            costOfIce = 1;
-            costOfSugar = 1;
-            costOfLemon = 1;
+            
 
         }
 

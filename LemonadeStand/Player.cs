@@ -12,11 +12,7 @@ namespace LemonadeStand
 
 
         //member variables (HAS A)
-        public LemonadeMachine lemonadeMachine;
-        public int CostOfLemon;
-        public int CostOfSugar;
-        public int CostOfIce;
-        public int CostOfCup;                
+        public LemonadeMachine lemonadeMachine;                        
         string response;        
         public int costOfSupplies;
         public int maxPrice;
@@ -24,6 +20,8 @@ namespace LemonadeStand
         public int cupsOfLemonadeSold;       
         int numberResponse;       
         public Wallet wallet;
+        public Inventory inventory;
+        public Store store;
         
         
 
@@ -34,18 +32,17 @@ namespace LemonadeStand
         public Player()
         {
                                 
-            CostOfCup = 1;
-            CostOfIce = 1;
-            CostOfSugar = 1;
-            CostOfLemon = 1;            
-            costOfSupplies = CostOfCup + CostOfIce + CostOfSugar + CostOfLemon;
-            maxPrice = costOfSupplies * 2;            
+                      
+            
+            maxPrice = store.costOfSupplies * 2;            
             cupsOfLemonadeSold = 0;
             priceofLemonade = 0;            
             numberResponse = 0;
             response = null;            
             lemonadeMachine = new LemonadeMachine();
             wallet = new Wallet();
+            inventory = new Inventory();
+
             
             
         }
@@ -58,7 +55,7 @@ namespace LemonadeStand
 
         public void CheckLemonOrderingMoney()
         {
-            if (wallet.totalMoney < wallet.costOfLemon)
+            if (wallet.totalMoney < store.costOfLemon)
             {
                 Console.WriteLine("You dont have enough money to order any lemons");
             }
@@ -75,7 +72,7 @@ namespace LemonadeStand
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
             {               
-                lemonadeMachine.inventory.lemons = numberResponse;
+                inventory.amountOfLemon = numberResponse;
             }
             else
             {
@@ -84,7 +81,7 @@ namespace LemonadeStand
             }
 
 
-            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * CostOfLemon);
+            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfLemon);
         }
         /*public void OrderLemons()
         {
@@ -111,7 +108,7 @@ namespace LemonadeStand
 
         public void CheckSugarOrderingMoney()
         {
-            if (wallet.totalMoney < wallet.costOfSugar)
+            if (wallet.totalMoney < store.costOfSugar)
             {
                 Console.WriteLine("You dont have enough money to order any Sugar");
             }
@@ -124,20 +121,20 @@ namespace LemonadeStand
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
             {
-                lemonadeMachine.inventory.sugar = numberResponse;
+                inventory.amountOfSugar = numberResponse;
             }
             else
             {
                 Console.WriteLine("That was not a number.");
                 OrderSugar();
             }
-            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * CostOfSugar);
+            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfSugar);
         }
         //-------------Sugar-----------------------------------------------------------------------
 
         public void CheckIceOrderingMoney()
         {
-            if (wallet.totalMoney < wallet.costOfIce)
+            if (wallet.totalMoney < store.costOfIce)
             {
                 Console.WriteLine("You dont have enough money to order any Ice");
             }
@@ -151,14 +148,14 @@ namespace LemonadeStand
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
             {
-                lemonadeMachine.inventory.ice = numberResponse;
+                inventory.amountOfIce = numberResponse;
             }
             else
             {
                 Console.WriteLine("That was not a number.");
                 OrderIce();
             }
-            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * CostOfIce);
+            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfIce);
         }
 
         //-----------Ice-------------------------------------------------------------
@@ -182,14 +179,14 @@ namespace LemonadeStand
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
             {
-                lemonadeMachine.inventory.cups = numberResponse;
+                inventory.amountOfCup = numberResponse;
             }
             else
             {
                 Console.WriteLine("That was not a number.");
                 OrderCup();
             }
-            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * CostOfCup);
+            wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfCup);
         }
 
         //------------Cups-----------------------------------------------------------
