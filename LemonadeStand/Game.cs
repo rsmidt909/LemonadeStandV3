@@ -58,7 +58,7 @@ namespace LemonadeStand
 
         public void GameCheck()
         {
-            if (day.player.wallet.totalMoney <= day.player.costOfSupplies)
+            if (day.player.wallet.totalMoney <= day.player.store.costOfSupplies)
             {
                 Console.WriteLine("You ran out of money to make a single cup of lemonade! Game Over!");
                 Console.ReadLine();
@@ -96,7 +96,7 @@ namespace LemonadeStand
 
         
 
-        public void Run(Inventory inventory)
+        public void Run()
         {
             Console.Clear();
             Console.WriteLine("Youre Total Money is " + day.player.wallet.totalMoney);
@@ -105,6 +105,7 @@ namespace LemonadeStand
             Console.WriteLine("Press enter....");
             Console.ReadLine();
             Console.Clear();
+            Console.WriteLine("You have " + day.player.wallet.totalMoney + " Dollars.");
             Console.WriteLine("The price of lemons are " + day.player.store.costOfLemon + " Dollars");
             day.player.CheckLemonOrderingMoney();
             GameCheck();
@@ -120,7 +121,7 @@ namespace LemonadeStand
             Console.WriteLine("The price of Cups are " + day.player.store.costOfCup + " Dollars");
             day.player.CheckCupOrderingMoney();
             GameCheck();
-            WhoMakesRecipe(inventory);
+            WhoMakesRecipe(day.player.inventory);
             Console.WriteLine("What would you like to set the price of one cup of lemonade?");
             Console.WriteLine("You cannot set the price higher than 2 times the amount that the supplies cost individually.");
             Console.WriteLine("The max set price is " + day.player.maxPrice + " Dollars.");
@@ -139,7 +140,7 @@ namespace LemonadeStand
             Console.ReadLine();
             StatReset();
             GameCheck();
-            Run(inventory);
+            Run();
 
         }
 

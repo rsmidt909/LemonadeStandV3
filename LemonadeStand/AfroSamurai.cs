@@ -54,14 +54,7 @@ namespace LemonadeStand
             }
             else { purchaseLemonade = false; }
         }
-
-        public override void Info()
-        {
-            if (purchaseLemonade == true)
-            {
-                Console.WriteLine(name + " bought a lemonade!");
-            }
-        }
+      
 
         public override void PersonalThirstNullifier()
         {
@@ -72,7 +65,7 @@ namespace LemonadeStand
         {
             if (maxthirst <= 0)
             {
-                maxthirst = 2;
+                maxthirst = 1;
             }
         }
 

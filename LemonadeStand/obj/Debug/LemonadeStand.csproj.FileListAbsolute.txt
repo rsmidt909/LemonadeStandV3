@@ -12,3 +12,15 @@ C:\Users\rsmid\Desktop\dev\c#\LemonadeStandRework\LemonadeStand\obj\Debug\Lemona
 C:\Users\rsmid\Desktop\dev\c#\LemonadeStandRework\LemonadeStand\obj\Debug\LemonadeStand.csproj.CoreCompileInputs.cache
 C:\Users\rsmid\Desktop\dev\c#\LemonadeStandRework\LemonadeStand\obj\Debug\LemonadeStand.exe
 C:\Users\rsmid\Desktop\dev\c#\LemonadeStandRework\LemonadeStand\obj\Debug\LemonadeStand.pdb
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\bin\Debug\LemonadeStand.exe.config
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\bin\Debug\LemonadeStand.exe
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\bin\Debug\LemonadeStand.pdb
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\obj\Debug\LemonadeStand.csprojAssemblyReference.cache
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\obj\Debug\LemonadeStand.csproj.CoreCompileInputs.cache
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\obj\Debug\LemonadeStand.csproj.CopyComplete
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\obj\Debug\LemonadeStand.exe
+C:\Users\rsmid\Desktop\dev\c#\LemonadeStandV3\LemonadeStand\obj\Debug\LemonadeStand.pdb

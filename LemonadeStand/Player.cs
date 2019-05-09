@@ -13,8 +13,7 @@ namespace LemonadeStand
 
         //member variables (HAS A)
         public LemonadeMachine lemonadeMachine;                        
-        string response;        
-        public int costOfSupplies;
+        string response;               
         public int maxPrice;
         public int priceofLemonade;
         public int cupsOfLemonadeSold;       
@@ -31,10 +30,7 @@ namespace LemonadeStand
         //Constructor (BUILDS OBJECT)
         public Player()
         {
-                                
-                      
-            
-            maxPrice = store.costOfSupplies * 2;            
+                                                                          
             cupsOfLemonadeSold = 0;
             priceofLemonade = 0;            
             numberResponse = 0;
@@ -42,9 +38,11 @@ namespace LemonadeStand
             lemonadeMachine = new LemonadeMachine();
             wallet = new Wallet();
             inventory = new Inventory();
+            store = new Store();
+            maxPrice = store.costOfSupplies * 2;
 
-            
-            
+
+
         }
 
 
@@ -161,7 +159,7 @@ namespace LemonadeStand
         //-----------Ice-------------------------------------------------------------
         public void CheckCupOrderingMoney()
         {
-            if (wallet.totalMoney < wallet.costOfCup)
+            if (wallet.totalMoney < store.costOfCup)
             {
 
                 Console.WriteLine("You dont have enough money to order any Cups");

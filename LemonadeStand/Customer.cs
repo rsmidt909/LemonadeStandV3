@@ -34,8 +34,6 @@ namespace LemonadeStand
         
         public abstract void BuyLemonade();
 
-        public abstract void Info();
-
         public abstract void PersonalThirstNullifier();
 
         public abstract void MaxThirstCheck();

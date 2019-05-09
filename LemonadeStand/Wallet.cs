@@ -13,10 +13,7 @@ namespace LemonadeStand
         //member variables (HAS A)
         public int totalMoney;
         public int profit;
-        public int costOfCup;
-        public int costOfIce;
-        public int costOfSugar;
-        public int costOfLemon;
+        
 
 
 

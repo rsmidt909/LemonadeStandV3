@@ -44,7 +44,7 @@ namespace LemonadeStand
 
         public void FlowOfCustomers()
         {
-            for (int i = 0; i < player.lemonadeMachine.inventory.cupsOfLemonade & i < amountOfCustomers;)
+            for (int i = 0; i < player.inventory.cupsOfLemonade & i < amountOfCustomers;)
             {
                 RandomCustomer();
                 customer.HowMuchThirst(weather);
@@ -53,12 +53,18 @@ namespace LemonadeStand
                 customer.MaxThirstCheck();
                 customer.BuyLemonade();
                 LemonadePurchased();
-                customer.Info();
+                BuyCheck();
                 CupsOfLemonadeSold();
                 Thread.Sleep(1000);
             }
         }
-
+        public  void BuyCheck()
+        {
+            if (customer.purchaseLemonade == true)
+            {
+                Console.WriteLine(customer.name + " bought a lemonade!");
+            }
+        }
         public void RandomCustomer()
         {
             int who = RandomNumber(1, 6);
@@ -119,9 +125,9 @@ namespace LemonadeStand
 
         public void LemonadePurchased()
         {
-            if (customer.purchaseLemonade == true & player.lemonadeMachine.inventory.cupsOfLemonade > 0)
+            if (customer.purchaseLemonade == true & player.inventory.cupsOfLemonade > 0)
             {
-                player.lemonadeMachine.inventory.cupsOfLemonade--;
+                player.inventory.cupsOfLemonade--;
                 player.wallet.totalMoney = player.wallet.totalMoney + player.priceofLemonade;
 
             }

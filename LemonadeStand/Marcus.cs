@@ -51,20 +51,14 @@ namespace LemonadeStand
 
         public override void BuyLemonade()
         {
-            if (RandomNumber(1, maxthirst) > (maxthirst / 2))
+            if (RandomNumber(1, maxthirst) >= (maxthirst / 2))
             {
                 purchaseLemonade = true;
             }
             else { purchaseLemonade = false; }
         }
 
-        public override void Info()
-        {
-            if (purchaseLemonade == true)
-            {
-                Console.WriteLine(name + " bought a lemonade!");
-            }
-        }
+
 
         public override void PersonalThirstNullifier()
         {
@@ -75,7 +69,7 @@ namespace LemonadeStand
         {
             if (maxthirst <= 0)
             {
-                maxthirst = 2;
+                maxthirst = 1;
             }
         }
 
