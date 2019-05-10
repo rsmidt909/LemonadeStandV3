@@ -13,36 +13,13 @@ namespace LemonadeStand
         //member variables (HAS A)
                                   
         public Day day;
-        public bool moneyText;
-        public bool priceText;
-        public bool setPriceText;
-        public bool timeForLemonadeText;
-        public bool noMoreCustomersText;
-        public bool profitForDayText;
-        public bool weatherText;
-        public bool gameOverText;
 
 
         //Constructor (BUILDS OBJECT)
         public Game()
         {
             
-            day = new Day();           
-            moneyText = true;
-            priceText = true;
-            setPriceText = true;
-            timeForLemonadeText = true;
-            noMoreCustomersText = true;
-            profitForDayText = true;
-            weatherText = true;
-            gameOverText = false;
-
-
-
-
-
-
-
+            day = new Day();                                  
 
         }
 
@@ -59,7 +36,7 @@ namespace LemonadeStand
         {
             if (day.player.wallet.totalMoney <= day.player.store.costOfSupplies)
             {
-                gameOverText = true;
+                UserInterface.GameOverText();
                 Console.ReadLine();
                 Environment.Exit(0);
             }
@@ -101,36 +78,36 @@ namespace LemonadeStand
         public void Run()
         {
             Console.Clear();
-            UserInterface.WeatherText(weatherText);
+            UserInterface.WeatherText();
             day.weather.OneDayOrSeven();           
             Console.ReadLine();
             Console.Clear();           
-            UserInterface.PriceText(priceText, day.player.store);
-            UserInterface.MoneyText(moneyText, day.player.wallet);           
+            UserInterface.PriceText(day.player.store);
+            UserInterface.MoneyText(day.player.wallet);           
             day.player.CheckLemonOrderingMoney();
             GameCheck();
-            UserInterface.MoneyText(moneyText, day.player.wallet);
+            UserInterface.MoneyText(day.player.wallet);
             day.player.CheckSugarOrderingMoney();
             GameCheck();
-            UserInterface.MoneyText(moneyText, day.player.wallet);
+            UserInterface.MoneyText(day.player.wallet);
             day.player.CheckIceOrderingMoney();
             GameCheck();
-            UserInterface.MoneyText(moneyText, day.player.wallet);
+            UserInterface.MoneyText(day.player.wallet);
             day.player.CheckCupOrderingMoney();
             GameCheck();
             WhoMakesRecipe(day.player.inventory);
-            UserInterface.SetPriceText(setPriceText, day.player);
+            UserInterface.SetPriceText(day.player);
             day.player.SetPurchasePrice();
             Console.Clear();
-            UserInterface.LemonadeTimeText(timeForLemonadeText);
+            UserInterface.LemonadeTimeText();
             day.AmountOfCustomersForDay();
             day.FlowOfCustomers();
-            UserInterface.NoMoreCustomersText(noMoreCustomersText);           
+            UserInterface.NoMoreCustomersText();           
             Console.ReadLine();
             day.ProfitFromLemonadeSold();
             day.player.inventory.Perishable();
-            UserInterface.ProfitForTheDayText(profitForDayText, day.player.wallet);
-            UserInterface.MoneyText(moneyText, day.player.wallet);
+            UserInterface.ProfitForTheDayText(day.player.wallet);
+            UserInterface.MoneyText(day.player.wallet);
             Console.ReadLine();
             StatReset();
             GameCheck();

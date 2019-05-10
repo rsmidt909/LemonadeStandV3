@@ -42,76 +42,50 @@ namespace LemonadeStand
 
         
 
-        public static void MoneyText(bool moneyText, Wallet wallet)
-        {
-            if(moneyText == true)
-            {
-                Console.WriteLine("You have " + wallet.totalMoney + " Dollars.");
-            }
+        public static void MoneyText(Wallet wallet)
+        {        
+                Console.WriteLine("You have " + wallet.totalMoney + " Dollars.");          
         }
 
-        public static void PriceText(bool priceText, Store store)
+        public static void PriceText(Store store)
         {
-            
-            if (priceText == true)
-            {
                 Console.WriteLine("The price of lemons are " + store.costOfLemon + " Dollars.\n"+
                 "The price of Sugar cubes are " + store.costOfSugar + " Dollars.\n"+
                 "The price of Ice are " + store.costOfIce + " Dollars.\n"+
-                "The price of Cups are " + store.costOfCup + " Dollars.");
-            }
+                "The price of Cups are " + store.costOfCup + " Dollars.");           
         }
 
-        public static void SetPriceText(bool setPriceText, Player player)
+        public static void SetPriceText(Player player)
         {
-            if (setPriceText == true)
-            {
                 Console.WriteLine("What would you like to set the price of one cup of lemonade?\n"+
                 "You cannot set the price higher than 2 times the amount that the supplies cost individually.\n"+
                 "The max set price is " + player.maxPrice + " Dollars.\n"+
-                "*Tip* If you set the price too high, you will have a lower cance of lemonade being purchased! *Tip*");
-            }
+                "*Tip* If you set the price too high, you will have a lower cance of lemonade being purchased! *Tip*");            
         }
 
-        public static void LemonadeTimeText(bool timeForLemonadeText)
-        {
-            if (timeForLemonadeText == true)
-            {
-                Console.WriteLine("Time to sell some Lemonade!");
-            }
+        public static void LemonadeTimeText()
+        {            
+                Console.WriteLine("Time to sell some Lemonade!");            
         }
 
-        public static void NoMoreCustomersText(bool noMoreCustomersText)
-        {
-            if (noMoreCustomersText == true)
-            {
-                Console.WriteLine("No more customers for the day!");
-            }
+        public static void NoMoreCustomersText()
+        {            
+                Console.WriteLine("No more customers for the day!");         
         }
 
-        public static void ProfitForTheDayText(bool profitForDayText, Wallet wallet)
-        {
-            if (profitForDayText == true)
-            {
-                Console.WriteLine("Youre profit for the day is " + wallet.profit);
-            }
+        public static void ProfitForTheDayText(Wallet wallet)
+        {           
+                Console.WriteLine("Youre profit for the day is " + wallet.profit);            
         }
 
-        public static void WeatherText(bool weatherText)
-        {
-            if (weatherText == true)
-            {
-                Console.WriteLine("Would you like to see just 'One' days weather or the next 'Seven' days?");
-            }
+        public static void WeatherText()
+        {            
+                Console.WriteLine("Would you like to see just 'One' days weather or the next 'Seven' days?");           
         }
 
-        public static void GameOverText(bool gameOverText)
-        {
-            if (gameOverText == true)
-            {
-                Console.WriteLine("You ran out of money to make a single cup of lemonade! Game Over!");
-               
-            }
+        public static void GameOverText()
+        {            
+                Console.WriteLine("You ran out of money to make a single cup of lemonade! Game Over!");            
         }
 
         public static void NotANumber()
