@@ -3,14 +3,14 @@
   <Class Name="LemonadeStand.Customer">
     <Position X="3.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAAEAAQAIABAAAAEAMAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAEAAQAIABAAAAEAMAAAAAAAAAAAAQ=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Day" Collapsed="true">
     <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAYAAEABAAAAEAQEAAAAAAAAARAAAIQBAAAAAIAAAAQ=</HashCode>
+      <HashCode>AAYAAAABAAAAEAQEAAAAAAAAARBAAIQBAAAAAAAAAAQ=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -29,18 +29,19 @@
   <Class Name="LemonadeStand.Player" Collapsed="true">
     <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAEAhAAAAFQAgQAgAIAAAAAACAAQHIAAAAAAAAAU=</HashCode>
+      <HashCode>AEAAAEAhAAAAFQAgQAgAIAAAAAAAAAQHIAAAAAAAAAU=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="lemonadeMachine" />
       <Field Name="wallet" />
+      <Field Name="inventory" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.UserInterface" Collapsed="true">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCAgAAAAAAA=</HashCode>
+      <HashCode>ACIAEEAAAAAAOAAIAAQQCAIAAgAAAAGAAAAAAAIIAAA=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -54,49 +55,49 @@
   <Class Name="LemonadeStand.AfroSamurai" Collapsed="true">
     <Position X="2" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>AfroSamurai.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Domino" Collapsed="true">
     <Position X="2" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Domino.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Elissa" Collapsed="true">
     <Position X="2" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Elissa.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Ender" Collapsed="true">
     <Position X="2" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Ender.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Joe" Collapsed="true">
     <Position X="2" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Joe.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Marcus" Collapsed="true">
     <Position X="2" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAEAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAIABAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Marcus.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Wallet" Collapsed="true">
     <Position X="6.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEQAAAAAAAACAAAAAAAAAAAAAACAAgAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Wallet.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -110,7 +111,7 @@
   <Class Name="LemonadeStand.Game" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAEAAAAAAAAIAAEAAAAAAAAAAHAAEAAAAAAAAAAM=</HashCode>
+      <HashCode>AgAgAAAQAAQAABIAAAAACAAAAIAAFAAAAEgAAAAAAAI=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

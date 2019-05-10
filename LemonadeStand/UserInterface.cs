@@ -145,6 +145,19 @@ namespace LemonadeStand
             Console.WriteLine("How many Ice cubes would you like to go into your recipe?");
         }
 
+        public static void NotAnOption()
+        {
+            Console.WriteLine("That is not an option, please try again.");
+        }
+
+        public static void MakeRecipeQuestion()
+        {
+            Console.WriteLine("Would you like to make the recipe, 'Yes' or 'No'");
+        }
+
+
+
+
 
 
 

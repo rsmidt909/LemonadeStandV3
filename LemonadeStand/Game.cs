@@ -11,12 +11,7 @@ namespace LemonadeStand
     {
 
         //member variables (HAS A)
-        
-        public string response;
-        public int lemonNumber;
-        public int sugarNumber;
-        public int iceNumber;
-        public int numberResponse;                            
+                                  
         public Day day;
         public bool moneyText;
         public bool priceText;
@@ -29,16 +24,10 @@ namespace LemonadeStand
 
 
         //Constructor (BUILDS OBJECT)
-        public Game(string response)
+        public Game()
         {
             
-            this.response = response;
-            day = new Day();
-            // response = null;
-            lemonNumber = 0;
-            sugarNumber = 0;
-            iceNumber = 0;
-            numberResponse = 0;
+            day = new Day();           
             moneyText = true;
             priceText = true;
             setPriceText = true;

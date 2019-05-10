@@ -45,7 +45,7 @@ namespace LemonadeStand
             {
                 maxthirst = 100;
             }
-            else Console.WriteLine("Something went wrong at Thirst Level");
+            else UserInterface.ThirstLevelError();
 
         }
 

@@ -13,7 +13,6 @@ namespace LemonadeStand
         //member variables (HAS A)
         
         public Weather weather;
-        public int dayCounter;
         public Player player;
         public Customer customer;
         public int amountOfCustomers;
@@ -26,7 +25,6 @@ namespace LemonadeStand
         public Day()
         {
             weather = new Weather();
-            dayCounter = 0;
             amountOfCustomers = 0;
             customer = null;
             player = new Player();
@@ -36,11 +34,6 @@ namespace LemonadeStand
 
         //member methods(CAN DO)
 
-        public void WhatDayIsIt()
-        {           
-            dayCounter++;
-            Console.WriteLine("Day "+dayCounter);
-        }
 
         public void FlowOfCustomers()
         {

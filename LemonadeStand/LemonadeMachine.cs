@@ -25,8 +25,7 @@ namespace LemonadeStand
             lemonNumber = 0;
             sugarNumber = 0;
             iceNumber = 0;
-            
-            
+                       
         }
 
 
