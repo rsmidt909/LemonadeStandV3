@@ -28,30 +28,24 @@ namespace LemonadeStand
         public bool gameOverText;
 
 
-
-
-
-
-
-
-
         //Constructor (BUILDS OBJECT)
-        public Game()
+        public Game(string response)
         {
-
+            
+            this.response = response;
             day = new Day();
-            response = null;
+            // response = null;
             lemonNumber = 0;
             sugarNumber = 0;
             iceNumber = 0;
             numberResponse = 0;
-            moneyText = false;
-            priceText = false;
-            setPriceText = false;
-            timeForLemonadeText = false;
-            noMoreCustomersText = false;
-            profitForDayText = false;
-            weatherText = false;
+            moneyText = true;
+            priceText = true;
+            setPriceText = true;
+            timeForLemonadeText = true;
+            noMoreCustomersText = true;
+            profitForDayText = true;
+            weatherText = true;
             gameOverText = false;
 
 
@@ -94,7 +88,7 @@ namespace LemonadeStand
 
         public void WhoMakesRecipe(Inventory inventory)
         {
-            Console.WriteLine("Would you like to make the recipe, 'Yes' or 'No'");
+            UserInterface.MakeRecipeQuestion();
             string recipeDecision = Console.ReadLine();
             switch (recipeDecision)
             {
@@ -106,61 +100,50 @@ namespace LemonadeStand
                     day.player.lemonadeMachine.CanIMakeLemonade(inventory);
                     break;
                 default:
-                    Console.WriteLine("That is not an option, please try again.");
+                    UserInterface.NotAnOption();
                     WhoMakesRecipe(inventory);
                     break;
             }
         }
 
-        public void TextReset()
-        {
-            moneyText = false;
-            priceText = false;
-            setPriceText = false;
-            timeForLemonadeText = false;
-            noMoreCustomersText = false;
-            profitForDayText = false;
-            weatherText = false;
-            gameOverText = false;
-        }
+        
         
 
         public void Run()
         {
             Console.Clear();
-            weatherText = true;
+            UserInterface.WeatherText(weatherText);
             day.weather.OneDayOrSeven();           
             Console.ReadLine();
-            Console.Clear();
-            moneyText = true;            
-            priceText = true;           
+            Console.Clear();           
+            UserInterface.PriceText(priceText, day.player.store);
+            UserInterface.MoneyText(moneyText, day.player.wallet);           
             day.player.CheckLemonOrderingMoney();
             GameCheck();
-            moneyText = true;                        
+            UserInterface.MoneyText(moneyText, day.player.wallet);
             day.player.CheckSugarOrderingMoney();
             GameCheck();
-            moneyText = true;
+            UserInterface.MoneyText(moneyText, day.player.wallet);
             day.player.CheckIceOrderingMoney();
             GameCheck();
-            moneyText = true;
+            UserInterface.MoneyText(moneyText, day.player.wallet);
             day.player.CheckCupOrderingMoney();
             GameCheck();
             WhoMakesRecipe(day.player.inventory);
-            setPriceText = true;            
+            UserInterface.SetPriceText(setPriceText, day.player);
             day.player.SetPurchasePrice();
             Console.Clear();
-            timeForLemonadeText = true;           
+            UserInterface.LemonadeTimeText(timeForLemonadeText);
             day.AmountOfCustomersForDay();
             day.FlowOfCustomers();
-            noMoreCustomersText = true;            
+            UserInterface.NoMoreCustomersText(noMoreCustomersText);           
             Console.ReadLine();
             day.ProfitFromLemonadeSold();
             day.player.inventory.Perishable();
-            profitForDayText = true;
-            moneyText = true;            
+            UserInterface.ProfitForTheDayText(profitForDayText, day.player.wallet);
+            UserInterface.MoneyText(moneyText, day.player.wallet);
             Console.ReadLine();
             StatReset();
-            TextReset();
             GameCheck();
             Run();
 

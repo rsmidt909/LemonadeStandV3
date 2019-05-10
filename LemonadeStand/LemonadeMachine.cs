@@ -26,7 +26,7 @@ namespace LemonadeStand
             sugarNumber = 0;
             iceNumber = 0;
             
-
+            
         }
 
 
@@ -37,7 +37,7 @@ namespace LemonadeStand
 
         public void PlayerRecipeLemons()
         {
-            Console.WriteLine("How many lemons would you like to go into your recipe?");
+            UserInterface.HowManyLemons();
             response = Console.ReadLine();
 
             bool parseSuccess = int.TryParse(response, out numberResponse);
@@ -47,14 +47,14 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 PlayerRecipeLemons();
             }
         }
 
         public void PlayerRecipeSugar()
         {
-            Console.WriteLine("How many Sugar Cubes would you like to go into your recipe?");
+            UserInterface.HowMuchSugar();
             response = Console.ReadLine();
 
             bool parseSuccess = int.TryParse(response, out numberResponse);
@@ -64,7 +64,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 PlayerRecipeSugar();
             }
         }
@@ -72,7 +72,7 @@ namespace LemonadeStand
 
         public void PlayerRecipeIce()
         {
-            Console.WriteLine("How many Ice cubes would you like to go into your recipe?");
+            UserInterface.HowMuchIce();
             response = Console.ReadLine();
             iceNumber = int.Parse(response);
             bool parseSuccess = int.TryParse(response, out numberResponse);
@@ -82,7 +82,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 PlayerRecipeIce();
             }
         }
@@ -102,7 +102,7 @@ namespace LemonadeStand
             inventory.CheckSupplies();
             if (inventory.supplies == false)
             {
-                Console.WriteLine("You have made " + inventory.cupsOfLemonade + " cups of Lemonade.");
+                UserInterface.NumberOfLemonades(inventory);
             }
             else
             {
@@ -117,7 +117,7 @@ namespace LemonadeStand
             inventory.CheckSupplies();
             if (inventory.supplies == false)
             {
-                Console.WriteLine("You have made " + inventory.cupsOfLemonade + " cups of Lemonade.");
+                UserInterface.NumberOfLemonades(inventory);
             }
             else
             {
@@ -151,7 +151,7 @@ namespace LemonadeStand
         {
             if (lemonNumber == 0)
             {
-                Console.WriteLine("You need atleast 1 in your recipe. Please Try again.");
+                UserInterface.YouNeedOne();
                 PlayerRecipeLemons();
             }
         }
@@ -161,7 +161,7 @@ namespace LemonadeStand
         {
             if (sugarNumber == 0)
             {
-                Console.WriteLine("You need atleast 1 in your recipe. Please Try again.");
+                UserInterface.YouNeedOne();
                 PlayerRecipeSugar();
             }
         }
@@ -170,7 +170,7 @@ namespace LemonadeStand
         {
             if (iceNumber == 0)
             {
-                Console.WriteLine("You need atleast 1 in your recipe. Please Try again.");
+                UserInterface.YouNeedOne();
                 PlayerRecipeIce();
             }
         }
