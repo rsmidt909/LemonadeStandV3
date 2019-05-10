@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="LemonadeStand.Customer">
+  <Class Name="LemonadeStand.Customer" Collapsed="true">
     <Position X="3.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAEAAQAIABAAAAEAMAAAAAAAAAAAAQ=</HashCode>
@@ -19,15 +19,15 @@
       <Field Name="customer" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="LemonadeStand.Inventory">
-    <Position X="7.75" Y="2.5" Width="1.5" />
+  <Class Name="LemonadeStand.Inventory" Collapsed="true">
+    <Position X="9" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAAAAAAAAAAAAESACAAAAAAAQACABAAAA=</HashCode>
       <FileName>Inventory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Player" Collapsed="true">
-    <Position X="4.75" Y="2.5" Width="1.5" />
+    <Position X="5.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAEAhAAAAFQAgQAgAIAAAAAAAAAQHIAAAAAAAAAU=</HashCode>
       <FileName>Player.cs</FileName>
@@ -36,12 +36,13 @@
       <Field Name="lemonadeMachine" />
       <Field Name="wallet" />
       <Field Name="inventory" />
+      <Field Name="store" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LemonadeStand.UserInterface" Collapsed="true">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACIAEEAAAAAAOAAIAAQQCAIAAgAAAAGAAAAAAAIIAAA=</HashCode>
+      <HashCode>ADIQMEBAAAACPAIJAAQRGAIAggAAAAGAAAAAAAIIAAg=</HashCode>
       <FileName>UserInterface.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -95,14 +96,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LemonadeStand.Wallet" Collapsed="true">
-    <Position X="6.75" Y="1.5" Width="1.5" />
+    <Position X="7.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Wallet.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LemonadeStand.LemonadeMachine">
-    <Position X="5.75" Y="4.25" Width="1.5" />
+  <Class Name="LemonadeStand.LemonadeMachine" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAGIAAAAAAEAAAUAAAABAAAAACAAUAAAQACACAQE=</HashCode>
       <FileName>LemonadeMachine.cs</FileName>
@@ -117,6 +118,13 @@
     <ShowAsAssociation>
       <Field Name="day" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="LemonadeStand.Store" Collapsed="true">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAACAAAAAAAAAAAAAACCAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Store.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
