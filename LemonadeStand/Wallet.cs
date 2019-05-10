@@ -31,16 +31,7 @@ namespace LemonadeStand
         //member methods(CAN DO)
        
         
-        /*public bool CheckLemonOrderingMoney()
-        {
-            if (totalMoney < costOfLemon)
-            {
-                Console.WriteLine("You dont have enough money to order any lemons");
-            }
-
-            return (totalMoney > costOfLemon);
-            //else { OrderLemons(); }
-        }*/
+        
 
 
         

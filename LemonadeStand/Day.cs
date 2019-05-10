@@ -60,7 +60,7 @@ namespace LemonadeStand
         }
         public void RandomCustomer()
         {
-            int who = RandomNumber(1, 6);
+            int who = RandomNumber(0, 7);
             switch (who)
             {
                 case 1:

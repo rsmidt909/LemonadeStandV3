@@ -31,8 +31,8 @@ namespace LemonadeStand
 
 
         //member methods(CAN DO)
-        public void WeatherChooserToday()                   // The weather is able to be extended to content without
-        {                                                  // without modifcation
+        public void WeatherChooserToday()                   
+        {                                                  
             int weatherDecision = RandomNumber(1, 4);
             switch (weatherDecision)
             {
@@ -49,7 +49,7 @@ namespace LemonadeStand
                     currentWeather = "Nice";
                     break;
                 default:
-                    currentWeather = "Something broke the weather chooser.";
+                    UserInterface.WeatherChooserError();
                      break;
             }
         }
@@ -73,7 +73,7 @@ namespace LemonadeStand
                     forecastedWeather = "Nice";
                     break;
                 default:
-                    forecastedWeather = "Something broke the weather chooser.";
+                    UserInterface.WeatherChooserError();
                     break;
             }
         }
@@ -88,25 +88,25 @@ namespace LemonadeStand
         public void WeekOfWeather()
         {
             WeatherChooserToday();
-            Console.WriteLine("Today will be " +currentWeather);
+            UserInterface.TodaysWeatherText(this);
             Thread.Sleep(500);
             WeatherChooserTomorrow();
-            Console.WriteLine("The next day MAY be " + forecastedWeather);
+            UserInterface.ForcastedWeatherText(this);
             Thread.Sleep(500);
             WeatherChooserTomorrow();
-            Console.WriteLine("The next day MAY be " + forecastedWeather);
+            UserInterface.ForcastedWeatherText(this);
             Thread.Sleep(500);
             WeatherChooserTomorrow();
-            Console.WriteLine("The next day MAY be " + forecastedWeather);
+            UserInterface.ForcastedWeatherText(this);
             Thread.Sleep(500);
             WeatherChooserTomorrow();
-            Console.WriteLine("The next day MAY be " + forecastedWeather);
+            UserInterface.ForcastedWeatherText(this);
             Thread.Sleep(500);
             WeatherChooserTomorrow();
-            Console.WriteLine("The next day MAY be " + forecastedWeather);
+            UserInterface.ForcastedWeatherText(this);
             Thread.Sleep(500);
             WeatherChooserTomorrow();
-            Console.WriteLine("The next day MAY be " + forecastedWeather);
+            UserInterface.ForcastedWeatherText(this);
         }
 
         public void OneDayOrSeven()
@@ -116,13 +116,13 @@ namespace LemonadeStand
             {
                 case "One":
                     WeatherChooserToday();
-                    Console.WriteLine("Todays weather will be " + currentWeather);
+                    UserInterface.TodaysWeatherText(this);
                     break;
                 case "Seven":
                     WeekOfWeather();
                     break;               
                 default:
-                    Console.WriteLine("That is not an option, please try again.");
+                    UserInterface.NotAnOption();
                     OneDayOrSeven();
                     break;
             }

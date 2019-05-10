@@ -206,6 +206,15 @@ namespace LemonadeStand
             Console.WriteLine("How many cubes of Ice would you like to purchase?");
         }
 
+        public static void ErrorInRandomCustomer()
+        {
+            Console.WriteLine("Something went wrong with RandomCustomer Method");
+        }
+
+        public static void WhoBoughtALemonade(Customer customer)
+        {
+            Console.WriteLine(customer.name + " bought a lemonade!");
+        }
 
 
 
