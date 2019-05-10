@@ -55,7 +55,7 @@ namespace LemonadeStand
         {
             if (customer.purchaseLemonade == true)
             {
-                Console.WriteLine(customer.name + " bought a lemonade!");
+                UserInterface.WhoBoughtALemonade(customer);
             }
         }
         public void RandomCustomer()
@@ -82,7 +82,7 @@ namespace LemonadeStand
                     customer = new AfroSamurai();
                     break;
                 default:
-                    Console.WriteLine("Something went wrong with RandomCustomer Method");
+                    UserInterface.ErrorInRandomCustomer();
                     break;
 
 

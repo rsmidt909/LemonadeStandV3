@@ -88,7 +88,7 @@ namespace LemonadeStand
         {
             if (wallet.totalMoney < store.costOfSugar)
             {
-                UserInterface.NotEnoughSugarMoney()
+                UserInterface.NotEnoughSugarMoney();
             }
             else { OrderSugar(); }
         }
