@@ -216,6 +216,21 @@ namespace LemonadeStand
             Console.WriteLine(customer.name + " bought a lemonade!");
         }
 
+        public static void TodaysWeatherText(Weather weather)
+        {
+            Console.WriteLine("Todays weather will be " + weather.currentWeather);
+        }
+
+
+        public static void ForcastedWeatherText(Weather weather)
+        {
+            Console.WriteLine("The next day MAY be " + weather.forecastedWeather);
+        }
+
+        public static void WeatherChooserError()
+        {
+            Console.WriteLine("Something broke the weather chooser.");
+        }
 
 
     }

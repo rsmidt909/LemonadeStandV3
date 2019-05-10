@@ -38,7 +38,6 @@ namespace LemonadeStand
         {
             UserInterface.HowManyLemons();
             response = Console.ReadLine();
-
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
             {
@@ -72,8 +71,7 @@ namespace LemonadeStand
         public void PlayerRecipeIce()
         {
             UserInterface.HowMuchIce();
-            response = Console.ReadLine();
-            iceNumber = int.Parse(response);
+            response = Console.ReadLine();           
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
             {
