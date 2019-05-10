@@ -55,7 +55,7 @@ namespace LemonadeStand
         {
             if (wallet.totalMoney < store.costOfLemon)
             {
-                Console.WriteLine("You dont have enough money to order any lemons");
+                UserInterface.NotEnoughLemonMoney();
             }
 
             else { OrderLemons(); }
@@ -64,7 +64,7 @@ namespace LemonadeStand
         public void OrderLemons()
         {
 
-            Console.WriteLine("How many Lemons would you like to purchase?");
+            UserInterface.HowManyLemonsToPurchase();
             response = Console.ReadLine();
 
             bool parseSuccess = int.TryParse(response, out numberResponse);
@@ -74,47 +74,27 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 OrderLemons();
             }
 
 
             wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfLemon);
         }
-        /*public void OrderLemons()
-        {
-            
-            Console.WriteLine("How many Lemons would you like to purchase?");
-            response = Console.ReadLine();
-            
-            bool parseSuccess = int.TryParse(response, out numberResponse);
-            if (parseSuccess)
-            {
-                bool canAffordLemons= wallet.CheckLemonOrderingMoney();
-                lemonadeMachine.inventory.lemons = numberResponse;
-            }
-            else
-            {                
-                Console.WriteLine("That was not a number.");
-                OrderLemons();
-            }
-
-
-            totalMoney = totalMoney - (int.Parse(response) * CostOfLemon);
-        }*/
+        
         //--------------lemons---------------------------------------------------------------------
 
         public void CheckSugarOrderingMoney()
         {
             if (wallet.totalMoney < store.costOfSugar)
             {
-                Console.WriteLine("You dont have enough money to order any Sugar");
+                UserInterface.NotEnoughSugarMoney()
             }
             else { OrderSugar(); }
         }
         public void OrderSugar()
         {
-            Console.WriteLine("How many cubes of Sugar would you like to purchase?");
+            UserInterface.HowManySugarCubesToPurchase();
             response = Console.ReadLine();            
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
@@ -123,7 +103,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 OrderSugar();
             }
             wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfSugar);
@@ -134,14 +114,14 @@ namespace LemonadeStand
         {
             if (wallet.totalMoney < store.costOfIce)
             {
-                Console.WriteLine("You dont have enough money to order any Ice");
+                UserInterface.NotEnoughIceMoney();
             }
             else { OrderIce(); }
         }
 
         public void OrderIce()
         {
-            Console.WriteLine("How many cubes of Ice would you like to purchase?");
+            UserInterface.HowManyIceCubesToPurchase();
             response = Console.ReadLine();           
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
@@ -150,7 +130,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 OrderIce();
             }
             wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfIce);
@@ -162,7 +142,7 @@ namespace LemonadeStand
             if (wallet.totalMoney < store.costOfCup)
             {
 
-                Console.WriteLine("You dont have enough money to order any Cups");
+                UserInterface.NotEnoughCupMoney();
             }
             else
             {
@@ -172,7 +152,7 @@ namespace LemonadeStand
 
             public void OrderCup()
             {
-            Console.WriteLine("How many Cups would you like to purchase?");
+            UserInterface.HowManyCupsToPurchase();
             response = Console.ReadLine();
             bool parseSuccess = int.TryParse(response, out numberResponse);
             if (parseSuccess)
@@ -181,7 +161,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 OrderCup();
             }
             wallet.totalMoney = wallet.totalMoney - (int.Parse(response) * store.costOfCup);
@@ -201,12 +181,12 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("That was not a number.");
+                UserInterface.NotANumber();
                 SetPurchasePrice();
             }
                 if (priceofLemonade > maxPrice)
             {
-                Console.WriteLine("That price is higher than the allowed limit, please try again.");
+                UserInterface.PriceHigherThanAllowed();
                 SetPurchasePrice();
             }
         }

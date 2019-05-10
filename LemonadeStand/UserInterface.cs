@@ -155,8 +155,56 @@ namespace LemonadeStand
             Console.WriteLine("Would you like to make the recipe, 'Yes' or 'No'");
         }
 
+        public static void ThirstLevelError()
+        {
+            Console.WriteLine("Something went wrong at Thirst Level");
+        }
+
+        public static void NotEnoughLemonMoney()
+        {
+            Console.WriteLine("You dont have enough money to order any lemons");
+        }
 
 
+        public static void NotEnoughSugarMoney()
+        {
+            Console.WriteLine("You dont have enough money to order any Sugar");
+        }
+
+        public static void NotEnoughIceMoney()
+        {
+            Console.WriteLine("You dont have enough money to order any Ice");
+        }
+
+        public static void NotEnoughCupMoney()
+        {
+            Console.WriteLine("You dont have enough money to order any Cups");
+        }
+
+        public static void PriceHigherThanAllowed()
+        {
+            Console.WriteLine("That price is higher than the allowed limit, please try again.");
+        }
+
+        public static void HowManyLemonsToPurchase()
+        {
+            Console.WriteLine("How many Lemons would you like to purchase?");
+        }
+
+        public static void HowManySugarCubesToPurchase()
+        {
+            Console.WriteLine("How many cubes of Sugar would you like to purchase?");
+        }
+
+        public static void HowManyCupsToPurchase()
+        {
+            Console.WriteLine("How many Cups would you like to purchase?");
+        }
+
+        public static void HowManyIceCubesToPurchase()
+        {
+            Console.WriteLine("How many cubes of Ice would you like to purchase?");
+        }
 
 
 
